@@ -8,13 +8,13 @@ body {
 .container {
     max-width: 33%;
     border: 1px solid #C4C4C4;
-    box-sizing: border-box;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     align-items: center; 
     margin: auto;
     position: relative;
+    margin-top: 150px;
 }
 .container-block {
     background-color: #FFDC40;
@@ -47,6 +47,10 @@ body {
     position: absolute;
     top: 10px;
     right: 20px;
+}
+.items {
+    display: none;
+    list-style-type: none;
 }
 .button {
    margin: 19px;
