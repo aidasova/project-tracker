@@ -1,18 +1,20 @@
-let input = document.querySelector('.container-check')
-let items = document.querySelector('.items')
-//newItems = document.createElement('li')
 
-//console.log(input)
-input.forEach((element) => {
-    element.addEventListener('click', showItems)
-})
-function showItems (event) {
-    if(items.style.display === 'none') {
-        items.style.display = 'block'
-        event.target.textContent = items
-    } else {
-        items.style.display = 'none'
-    }
-    
-}
+//получить содержимое от инпута
+let input = document.querySelectorAll('.container-check');
+let button = document.querySelector('.button');
+
+
+button.addEventListener('click', () => {
+    input.forEach((item) => {
+        console.log(item.value); // содержимое ввода
+        if(item.value !== '') {           //если содержимое ввода заполнено, создаем ли и очищаем инпут
+            let li = document.createElement('li');
+            li.textContent = item.value
+            let list = document.querySelector('ul');
+            list.appendChild(li)
+            //очищаем инпут
+            item.value = "";
+        }
+    })
+});
 

@@ -7,6 +7,7 @@ body {
 }
 .container {
     max-width: 33%;
+    min-width: 250px;
     border: 1px solid #C4C4C4;
     border-radius: 10px;
     display: flex;
@@ -20,13 +21,16 @@ body {
     background-color: #FFDC40;
     width: 100%;
     height: 28px;
-    border-radius: 10px 10px 0 0;
+    border-radius: 9px 9px 0 0;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    position: absolute;
+    top: -1px;
 }
 .container-name {
     margin: 17px 0 39px 0;
     font-size: 26px;
     font-weight: 900;
+    padding-top: 30px;
 }
 .container-list {
     position: absolute;
@@ -36,23 +40,29 @@ body {
 .container-check {
     border: 1px solid #C4C4C4;
     border-radius: 10px;
-    padding: 10px 0 ;
-    width: 100%;
+    padding: 10px 0;
+    padding-left: 10px;
+    width: 95%;
+    outline: none;
+    position: relative;
+}
+.container-input {
+    width: 80%;
 }
 .container-change {
    position: relative;
-   width: 85%;
+   width: 100%;
 }
 .change {
     position: absolute;
-    top: 10px;
+    top: 8px;
     right: 20px;
 }
-.items {
-    display: none;
+#list {
     list-style-type: none;
 }
 .button {
    margin: 19px;
    box-sizing: border-box;
+   text-align: center;
 }
