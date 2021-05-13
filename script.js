@@ -1,38 +1,43 @@
 
 let input = document.querySelector('.container-check');
 let button = document.querySelector('.button');
-let tasks =[]; //массив из эллементов ли со значениями
+let inputAll = document.querySelector('.container-change')
+let tasks =[]; 
 
 button.addEventListener('click', () => {
         if(input.value !== '') {        
-            let li = document.createElement('li');
-            li.textContent = input.value
+            let div = document.createElement('div');
+            div.classList.add('li')
+            div.textContent = input.value
             //console.log(input.value)
             tasks.push(input.value)
             console.log(tasks)
-            refreshTasks(tasks, li)
+
+            refreshTasks(tasks, div)
 
             input.value = "";
         }
 });
 
-function refreshTasks(tasks, li) {
-        let list = document.querySelector('.list');
-        
+    function refreshTasks(tasks, div) {
         tasks.forEach((item) => { //перебираем массив
-            li.textContent = item //создаем строки с вводом
-            list.appendChild(li)
-          //  input.append(list)
-            let close = document.createElement('img') // ставим крестик у каждого li
+            div.textContent = item //создаем строки с вводом
+            inputAll.append(div)
+            let close = document.createElement('img') // ставим крестик у каждого div
             close.classList.add('close')
             close.src = 'images/Group56kre.svg' 
-            li.append(close)
+            div.append(close)
 
             close.addEventListener('click', () => { 
-                li.remove();
-            });
-        })    
+                div.remove();
+        });
+    
+    })    
 }
+/*let sort = document.querySelector('.container-list')
+sort.addEventListener('click', (ev) => {
+    if()
+})*/
 
 
 
