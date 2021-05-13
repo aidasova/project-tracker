@@ -38,14 +38,18 @@ body {
     top: 91px;
 }
 .container-check {
+    border: none;
+    outline: none;
+}
+.container-center {
     border: 1px solid #C4C4C4;
     border-radius: 10px;
     padding: 10px 0;
     padding-left: 10px;
     width: 95%;
-    outline: none;
     position: relative;
 }
+
 .container-input {
     width: 80%;
 }
