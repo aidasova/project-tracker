@@ -31,21 +31,8 @@ function refreshTasks(tasks, li) {
             close.addEventListener('click', () => { 
                 li.remove();
             });
-            close.addEventListener('mouseover', (event) => {
-               // event.target.close.classList.add(':hover')
-            });
         })    
 }
 
 
-/*
-function changeColor(event) {
-    event.target.style.color = '#833AE0'
-};
-function getRemove(event) {
-    event.target.li.remove()
-};
-close.forEach((element) => {
-    element.addEventListener('mouseover', changeColor);
-    element.addEventListener('click', getRemove);
-});*/
+

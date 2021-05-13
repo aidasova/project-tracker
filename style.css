@@ -67,7 +67,7 @@ body {
     right: 20px;
 }
 .close:hover {
-    background-image: url(project-tracker/images/Group70.svg);
+    background: url("project-tracker/images/Group70.svg") no-repeat;
 }
 li {
     display: flex;
