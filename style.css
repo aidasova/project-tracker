@@ -58,8 +58,20 @@ body {
     top: 8px;
     right: 20px;
 }
-#list {
+.list {
     list-style-type: none;
+    padding-left: 15px;
+}
+.close {
+    position: absolute;
+    right: 20px;
+}
+.close:hover {
+    background-image: url(project-tracker/images/Group70.svg);
+}
+li {
+    display: flex;
+    margin: 5px 0;
 }
 .button {
    margin: 19px;
