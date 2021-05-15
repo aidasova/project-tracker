@@ -67,11 +67,10 @@ sort.addEventListener('mouseout', () => {
 function sortTasks(tasks) {
 
     if(sortFlag === true) {
-        
         tasks.sort((a, b) => {
-            if(a > b) {
+            if(a.toLowerCase() > b.toLowerCase()) {
                 return -1;
-            } if(b > a) {
+            } if(b.toLowerCase() > a.toLowerCase()) {
                 return 1;
             }
             
@@ -80,9 +79,9 @@ function sortTasks(tasks) {
         sortFlag = false;
     } else {
         tasks.sort((a, b) => {
-            if(a < b) {
+            if(a.toLowerCase() < b.toLowerCase()) {
                 return -1;
-            } if(b < a) {
+            } if(b.toLowerCase() < a.toLowerCase()) {
                 return 1;
             }
             
