@@ -49,18 +49,9 @@ body {
     width: 95%;
     position: relative;
 }
-
 .container-input {
     width: 80%;
-}
-.container-change {
-   position: relative;
-   width: 100%;
-}
-.change {
-    position: absolute;
-    top: 8px;
-    right: 20px;
+    font-size: 14px;
 }
 .close {
     position: absolute;
@@ -79,4 +70,8 @@ body {
    margin: 19px;
    box-sizing: border-box;
    text-align: center;
+}
+.container-tasks >* {
+    padding: 5px 0;
+    font-size: 14px;
 }

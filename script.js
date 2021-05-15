@@ -1,8 +1,8 @@
 
 let input = document.querySelector('.container-check');
 let button = document.querySelector('.button');
-let inputAll = document.querySelector('.container-change')
 let taskContainer = document.querySelector('.container-tasks');
+let sort = document.querySelector('.container-list');
 let tasks =[]; 
 
 button.addEventListener('click', () => {
@@ -15,7 +15,6 @@ button.addEventListener('click', () => {
         console.log(tasks)
 
         refreshTasks(tasks)
-
         input.value = "";
     }
 });
@@ -43,21 +42,54 @@ function refreshTasks(tasks) {
     })    
 }
 
-function sortTasks() {
-    // 1. Cортировка массива tasks
-
-    // 2. refreshTasks(tasks)
+function clickImage () {
+    sort.addEventListener('mouseover', () => {
+        sort.src = (sort.src == 'images/strUpgrey.svg') ? 'images/strDownGrey.svg': 'images/StrDownblack.svg';
+     
+    });
 }
+    sort.addEventListener('click', () => { 
+        sort.src = (sort.src == 'images/StrDownblack.svg') ? 'images/strUpgrey.svg' : 'images/StrUpBlack.svg'
+    });
+  /*  sort.addEventListener('mouseout', () => {
+        sort.src = (sort.src == 'images/strDownblack.svg') ? 'images/StrUpgrey.svg' : 'images/strDownGrey.svg'; 
+    })*/
+    
+  /* sort.addEventListener('mouseout', () => {
+       if()
+        sort.src = (sort.src == ) ? 'images/strUpgrey.svg' : 'images/StrDownGrey.svg'
+    })*/
+//}
 
 
-/*let sort = document.querySelector('.container-list')
-sort.addEventListener('click', (ev) => {
-    if()
-})*/
 
-// tasks = [
-//     'КУпить рыбу',
-//     'Почистить зубы',
-//     'Сходить в магазин'
-// ]
+function sortTasks(tasks) {
+    sort.addEventListener('click', () => {
+        if(sort.src = 'images/strDownblack.svg') {
 
+            tasks.sort((a, b) => {
+                if(a > b) {
+                    return -1;
+                } if(b > a) {
+                    return 1;
+                }
+                
+            });
+        sort.src = 'images/strUpBlack.svg'
+        } if(sort.src = 'images/strUpBlack.svg') {
+            tasks.sort((a, b) => {
+                if(a < b) {
+                    return -1;
+                } if(b < a) {
+                    return 1;
+                }
+                
+            });
+        sort.src = 'images/strDownblack.svg'
+        
+        
+        }
+        refreshTasks(tasks)
+    });
+}
+sortTasks(tasks);
